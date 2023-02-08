@@ -35,7 +35,7 @@
   padding: 6px;
 }
 .navbar a:hover {
-  color: #f1356d;
+  color: rgb(79, 183, 79);
 }
 .content {
   max-width: 600px;
