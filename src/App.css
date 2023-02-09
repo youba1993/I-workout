@@ -15,6 +15,7 @@
   font-family: "Quicksand";
   color: #333;
 }
+
 .navbar {
   padding: 20px;
   display: flex;
@@ -23,31 +24,50 @@
   margin: 0 auto;
   border-bottom: 1px solid #f2f2f2;
 }
+
 .navbar h1 {
   color: #f1356d;
 }
+
 .navbar .links {
   margin-left: auto;
 }
+
 .navbar a {
   margin-left: 16px;
   text-decoration: none;
   padding: 6px;
 }
+
 .navbar a:hover {
   color: rgb(79, 183, 79);
 }
+
 .content {
   max-width: 600px;
   margin: 40px auto;
   padding: 20px;
 }
 
-.stopwatch{
-  margin: 25px 10px 10px 10px;
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 5px 5px;
 }
 
-button {
+.navbar li {
+  margin: 7px 7px 5px 5px;
+}
+
+/* Stopwatch component */
+
+.stopwatch {
+  padding: 20px;
+  margin: 25px 10px;
+  border-bottom: 1px solid #dbc4c4;
+}
+
+.stopwatch button {
   padding: 10px 25px;
   color: white;
   border-radius: 20px;
@@ -58,15 +78,36 @@ button {
 #start {
   background-color: rgb(53, 228, 56);
 }
+
 #stop {
   background-color: rgb(224, 79, 38);
 }
+
 #reset {
   background-color: rgb(39, 188, 238);
 }
 
 .stopwatch button:hover {
-  background-color: azure;
+  color: rgb(16, 15, 15);
 }
 
+/* Workout Component */
 
+.workout {
+  margin: 25px 10px 10px 10px;
+ text-align: center;
+}
+
+.workout button {
+  padding: 10px 25px;
+  color: white;
+  border-radius: 20px;
+  border: none;
+  margin: 10px 10px 10px 10px;
+  background-color: #f1356d;
+}
+.workout select {
+  margin: 15px;
+  padding: 7px 6px;
+  border: 1px solid #f72525;
+}
