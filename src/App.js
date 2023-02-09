@@ -1,5 +1,5 @@
 import './App.css';
-import Home from './components/Home';
+import Stopwatch from './components/Stopwatch';
 import Navbar from './components/Navbar';
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
     <div className="App">
         <Navbar/>
       <div className='content'>
-        <Home />
+        <Stopwatch />
       </div>
     </div>
   );

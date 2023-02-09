@@ -5,7 +5,7 @@ const Navbar = () => {
             <img className="App-logo" src={myLogo} alt="SVG logo" ></img>
             <h1>I-Workout</h1>
             <div className="links">
-                <a href="/">Home</a>
+                <a href="/stopwatch">Stopwatch</a>
                 <a href="/create" style={{
                     color: "white",
                     backgroundColor: '#f1356d',

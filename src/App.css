@@ -43,3 +43,30 @@
   padding: 20px;
 }
 
+.stopwatch{
+  margin: 25px 10px 10px 10px;
+}
+
+button {
+  padding: 10px 25px;
+  color: white;
+  border-radius: 20px;
+  border: none;
+  margin: 25px 10px 10px 10px;
+}
+
+#start {
+  background-color: rgb(53, 228, 56);
+}
+#stop {
+  background-color: rgb(224, 79, 38);
+}
+#reset {
+  background-color: rgb(39, 188, 238);
+}
+
+.stopwatch button:hover {
+  background-color: azure;
+}
+
+
