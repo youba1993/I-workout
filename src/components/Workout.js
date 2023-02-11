@@ -1,27 +1,28 @@
 import { useState } from "react";
+import axios from 'axios';
+import Exercise from "./Exercise";
 
 const Workout = () => {
-
+    const [exercisesResult, setExercisesResult] = useState(null)
     const [muscleOption, setMuscleOption] = useState('abdominals');
+
     const musclesList = ["abdominals", "abductors", "adductors", "biceps", "calves", "chest", "forearms", "glutes",
         "hamstrings", "lats", "lower_back", "middle_back", "neck", "quadriceps", "traps", "triceps"]
-    console.log(process.env)
-    function handleSubmit(e) {
-        e.preventDefault();
-           fetch("https://api.api-ninjas.com/v1/exercises?muscle="+muscleOption, {
-                method: 'GET',
-                mode: 'no-cors',
-                headers: {
-                    'X-Api-Key': process.env.API_KEY,
-                    "Content-Type": "Application/json",   
-                }
-            }).then(response => {
-                if (response.ok){
-                    console.log(response.json())
-                }
-                throw response
-            })
 
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            const resp = await axios({
+                url: "https://api.api-ninjas.com/v1/exercises?muscle=" + muscleOption,
+                method: 'GET',
+                headers: { 'X-Api-Key': process.env.REACT_APP_API_KEY },
+            })
+            setExercisesResult(resp.data)
+            console.log(exercisesResult)
+        }
+        catch (err) {
+            console.log(err)
+        }
     }
     return (
         <div className="workout">
@@ -35,6 +36,11 @@ const Workout = () => {
                 </select>
                 <button type="submit">Search</button>
             </form>
+            <div >
+                { exercisesResult && exercisesResult.map((exercice, index) =>
+                    <Exercise key={index} props={exercice} />
+                )}
+            </div>
         </div>
     );
 }

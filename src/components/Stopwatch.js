@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 
- 
-
 const Stopwatch = () => {
     const [isActive, setIsActive] = useState(false);
     const [isPaused, setIsPaused] = useState(true);
@@ -49,7 +47,6 @@ const Stopwatch = () => {
         setIsActive(false);
         setTime(0);
     }
-
 
     return (
         <div className="stopwatch">
