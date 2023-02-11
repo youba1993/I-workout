@@ -17,7 +17,7 @@ const Workout = () => {
                 method: 'GET',
                 headers: { 'X-Api-Key': process.env.REACT_APP_API_KEY },
             })
-            setExercisesResult(resp.data)
+             setExercisesResult(resp.data)
             console.log(exercisesResult)
         }
         catch (err) {
@@ -36,11 +36,9 @@ const Workout = () => {
                 </select>
                 <button type="submit">Search</button>
             </form>
-            <div >
                 { exercisesResult && exercisesResult.map((exercice, index) =>
-                    <Exercise key={index} props={exercice} />
+                    <Exercise key={index} exercice={exercice} />
                 )}
-            </div>
         </div>
     );
 }
