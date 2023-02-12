@@ -12,7 +12,7 @@ const Navbar = () => {
                         color: "white",
                         backgroundColor: '#f1356d',
                         borderRadius: '8px'
-                    }}>Search Workout </Link></li>
+                    }}> Workouts </Link></li>
                 </ul>
 
             </div>
